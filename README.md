@@ -1,3 +1,3 @@
 # SweatworksTest
 
-Test android project for Sweatwroks.
+Test android project for Sweatworks.
