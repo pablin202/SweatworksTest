@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.pdm.sweatworkstest.presentation.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.pdm.sweatworkstest.presentation.ui.details.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+        <argument
+            android:name="UUID"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="THUMB_IMG"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="LARGE_IMG"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="MEDIUM_IMG"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="TITLE"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="EMAIL"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="NAME"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="LAST_NAME"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="USERNAME"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="PHONE"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+</navigation>
